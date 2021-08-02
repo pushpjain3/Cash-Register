@@ -16,19 +16,22 @@
 		<div class="container">
 			<div class="boxes">
 				<label for="bill-input">Enter Bill Amount here: </label>
-				<input type="text" name="bill" id="bill-input" />
+				<input type="text" name="bill" id="bill-input"  />
 				<label for="cash-input">Enter Cash Given: </label>
 				<input type="text" name="bill" id="cash-input" />
 				<p id="error" class="error-msg"> </p>
-				<input
+                <div class="button">
+<input
 					type="button"
 					value="Get Change"
 					id="submit-button"
 					class="btn"
 				/>
+                </div>
+				
 			</div>
-			<div class="boxes">
-				<table id="change-register">
+			<div class="boxes result">
+				<table id="change-register" class="change-register">
 					<tr>
 						<th>Notes</th>
 						<th>2000</th>

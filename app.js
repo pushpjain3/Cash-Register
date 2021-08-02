@@ -23,12 +23,19 @@ const submitClickHandler = () => {
 		var cash = Number(cashAmount);
 		var bill = Number(billAmount);
 		if (cash >= bill) {
+			errMsg.innerText = "";
 			calculateChange(cash, bill);
 		} else {
-			errMsg.innerText = "Do you wanna wash dishes?";
+			errMsg.innerText = "!! Do you wanna wash dishes?";
+			for (let i = 1; i <= changeAvl.length; i++) {
+				changeLog.rows[1].cells[i].innerText = "";
+			}
 		}
 	} else {
-		errMsg.innerText = "Please enter cash in digits!!";
+		errMsg.innerText = "!! Please enter amount in digits !!";
+		for (let i = 1; i <= changeAvl.length; i++) {
+			changeLog.rows[1].cells[i].innerText = "";
+		}
 	}
 };
 
